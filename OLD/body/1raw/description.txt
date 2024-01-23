@@ -1,0 +1,2 @@
+1 = Ne_100000.GenomeLength_10000.MaxNumbOfGenerations_1000.MutRate_0.000001.SelCoeff1_0.01.DomCoeff1_0.5.MutRatio1_999.SelCoeff2_1.DomCoeff2_0.5.MutRatio2_1
+2 = Ne_100000.GenomeLength_10000.MaxNumbOfGenerations_10000.MutRate_0.000001.SelCoeff1_0.01.DomCoeff1_0.5.MutRatio1_XXX.SelCoeff2_XXX.DomCoeff2_XXX.MutRatio2_XXX
