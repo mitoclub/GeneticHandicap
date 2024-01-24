@@ -30,15 +30,16 @@ pdf("handicap_effect_heatmap_2A.pdf", width = 8, height = 6)
 # Plot the heatmap
 heatmap_plot <- ggplot(results_df, aes(x = BetaStrength, y = HandicapSeverity, fill = HandicapEffect)) +
   geom_tile() +
-  scale_fill_gradient2(low = "blue", high = "red", mid = "white", 
+  scale_fill_gradient2(low = "white", high = "red", mid = "yellow", 
                        midpoint = median(results_df$HandicapEffect), limit = c(min(results_df$HandicapEffect), max(results_df$HandicapEffect)),
                        space = "Lab", name="Handicap Effect") +
   theme_minimal() +
-  labs(x = "Strength of Epistasis (β)", y = "Handicap Severity", title = "Heatmap of Handicap Effect") +
-  coord_fixed(ratio = 1)
+  labs(x = "Strength of Epistasis (??)", y = "Handicap Severity", title = "Heatmap of Handicap Effect") +
+  coord_fixed(ratio = 1) + scale_x_continuous(labels=function(x)x/100) + scale_y_continuous(labels=function(y)y*2)
 
 # Print the plot to the PDF
 print(heatmap_plot)
 
 # Close the PDF device
 dev.off()
+
