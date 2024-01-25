@@ -34,7 +34,7 @@ heatmap_plot <- ggplot(results_df, aes(x = BetaStrength, y = HandicapSeverity, f
                        midpoint = median(results_df$HandicapEffect), limit = c(min(results_df$HandicapEffect), max(results_df$HandicapEffect)),
                        space = "Lab", name="Handicap Effect") +
   theme_minimal() +
-  labs(x = "Strength of Epistasis (??)", y = "Handicap Severity", title = "Heatmap of Handicap Effect") +
+  labs(x = "Strength of Epistasis (Beta coefficient)", y = "Handicap Severity", title = "Heatmap of Handicap Effect") +
   coord_fixed(ratio = 1) + scale_x_continuous(labels=function(x)x/100) + scale_y_continuous(labels=function(y)y*2)
 
 # Print the plot to the PDF
